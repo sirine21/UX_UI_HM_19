@@ -10,14 +10,21 @@
     /*margin-top: 0%;*/
     /*height: 100px;*/
 }
-.navLink li{
+.navLink li a{
     padding: 10%;
     height: 10px;
     max-width: 10px;
     font-size: 24px;
     color: rgba(172, 125, 3, 1);
-    
+    text-decoration: none;   
 }
+.navLink li a:hover{
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+
+
 .logo{
     padding: 5%;
     height: 20%;
@@ -118,10 +125,15 @@ hr {
 display: flex;
 grid-column-start: 1;
 padding:20px;
+grid-column: 1/4;
 }
 .study{
-    width: 100%;
+    width: 50%;
     height:auto;
+}
+.iphone{
+    width:100%;
+    height: auto;
 }
 .description{
     width: 40%;
@@ -133,13 +145,23 @@ padding:20px;
   }
 .workGrid{
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: repeat(5, 1fr);
+     /* grid-template-rows: 1fr 1fr 1fr;*/
       grid-template-areas:
       'row description'
       'description1 row1'
       'row description' ;
       grid-gap: 15px;
+      
+}
+.firstrow{
+    grid-row: 1/2;
+}
+.secondrow{
+    grid-row: 2/3;
+}
+.thirdrow{
+    grid-row: 3/4;
 }
 h4{
     font-size: 24px;
@@ -160,7 +182,7 @@ p{
     width: 80%;
 }
 .row1{
-   grid-column-start: 2;
+   grid-column: 3/6;
    grid-row-start: 2;
    display:flex;
    float: right;
@@ -190,12 +212,20 @@ button {
   margin-top: 20px;
 }
 .myskills{
-    
     font-size: 24px;
+    width: 80vw;
+    margin: 0 auto;
 }
 .myWork{
     font-size: 24px;
+    width: 100vw;
+    
 }
+.workwrapper{
+    margin: 0 auto;
+    width: 80vw;
+}
+
 .footer ul{
     width :100%;
     display: flex;
