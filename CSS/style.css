@@ -22,9 +22,6 @@
     text-decoration: underline;
     text-underline-position: under;
 }
-
-
-
 .logo{
     padding: 5%;
     height: 20%;
@@ -72,7 +69,6 @@ nav {
     padding: 3%;
     list-style: none;
 }
-
 .headshot{
     width: 20%;
     height: 20%;
@@ -132,25 +128,28 @@ grid-column: 1/4;
     height:auto;
 }
 .iphone{
-    width:100%;
+    width:120%;
     height: auto;
+    
+    padding-right: 10%;
 }
 .description{
     width: 40%;
-    padding: 20px;
+    padding: 30px;
     height: 200px;
     grid-column-start: 2;
     float: right;
+    
     
   }
 .workGrid{
       display: grid;
       grid-template-columns: repeat(5, 1fr);
      /* grid-template-rows: 1fr 1fr 1fr;*/
-      grid-template-areas:
-      'row description'
-      'description1 row1'
-      'row description' ;
+      /* grid-template-areas: */
+      /* 'row description' */
+      /* 'description1 row1' */
+      /* 'row description' ; */
       grid-gap: 15px;
       
 }
@@ -164,20 +163,20 @@ grid-column: 1/4;
     grid-row: 3/4;
 }
 h4{
-    font-size: 24px;
-   
+    font-size: 24px;  
 }
-
 p{
-   text-align: left;
+   text-align: center;
    color: rgba(80, 85, 92, 1);
-   padding: 1%;
+   padding: 2%;
    font-size: 24px;
+   margin: 5px;
+   line-height: 1.1;
 }
 .description1{
     grid-column-start: 1;
     float: left;
-    padding: 20px;
+    padding: 30px;
     height: 200px;
     width: 80%;
 }
@@ -186,7 +185,7 @@ p{
    grid-row-start: 2;
    display:flex;
    float: right;
-    padding: 20px;
+   padding: 20px;
 }
 ul{
     width :100%;
@@ -221,23 +220,24 @@ button {
     width: 100vw;
     
 }
-.workwrapper{
+.workwrapper{ 
     margin: 0 auto;
     width: 80vw;
-}
+ }
 
 .footer ul{
     width :100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: 5%;
+    padding: 10%;
     list-style: none;
 }
 @media only screen and (max-width: 600px) {
     .workGrid{
-        display: flex;
+        display: grid;
         flex-direction: column;
+        grid-template-columns:repeat(5,1fr);
         /*grid-template-columns: 1fr ;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
@@ -245,12 +245,21 @@ button {
         'description'
         'row1'
         'description1'*/
+     
+      
     }
-    
+   .workwrapper{  
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;*/
+        
+    }
     .flexContainer {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;}
+        justify-content: space-around;
+    
+    }
     .nav { 
             width: 100%;
             padding: 20px;
@@ -265,11 +274,6 @@ button {
         flex-wrap: wrap;
       
     }
-    .description{
-            width: 100%;
-        }
-    .description1{
-            width: 100%;
-        }
+    
  }
         
