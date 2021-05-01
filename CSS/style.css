@@ -235,11 +235,12 @@ button {
 }
 @media only screen and (max-width: 600px) {
     .workGrid{
-        display: grid;
+        display: flex;
         flex-direction: column;
-        grid-template-columns:repeat(5,1fr);
-        /*grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        flex-wrap:wrap;
+        /* grid-template-columns:repeat(1,1fr); */
+        /*grid-template-columns: 1fr ; 
+         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
         grid-template-areas:
         'row '
         'description'
@@ -251,7 +252,7 @@ button {
    .workwrapper{  
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;*/
+        flex-wrap: wrap;
         
     }
     .flexContainer {
