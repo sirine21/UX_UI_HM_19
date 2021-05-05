@@ -2,13 +2,11 @@
     
     vertical-align: top;
     width:100%;
-    /*padding: 1%;*/
     display: flex;
     flex-flow: row;
     align-items: flex-end;
     color: rgba(80, 85, 92, 1);
-    /*margin-top: 0%;*/
-    /*height: 100px;*/
+    
 }
 .navLink li a{
     padding: 10%;
@@ -28,7 +26,7 @@
     max-width: 20%;
     text-align: left;
     display: block;
-    /*margin: 0%;*/
+   
 }
 body{
    font-family:'Della Respira', serif;;
@@ -57,14 +55,12 @@ nav {
     display: flex;
     flex-direction: row;
     height: auto;
-    /*justify-content: left;*/
     font-size: 24px;
 }
 .inline-block ul{
     width :100%;
     display: flex;
     flex-direction: row;
-    /*justify-content: flex-end;*/
     align-items: flex-end;
     padding: 3%;
     list-style: none;
@@ -113,76 +109,98 @@ hr {
     border-width: 1px;
     align-self:flex-end
 }
-.gov {
-    width: 25%;
-    padding: 10px;
-}
-
 .study{
     width: 50%;
     height:auto;
 }
-.iphone{
-    width:120%;
-    height: auto;
-    
-    padding-right: 10%;
-}
-.description{
-    width: 40%;
-    padding: 30px;
-    height: 200px;
-    grid-column-start: 2;
-    float: right;
-    text-align: left;
-    
-  }
 .workGrid{
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: minmax(100px, auto);
-     /* grid-template-rows: 1fr 1fr 1fr;*/
-      /* grid-template-areas: */
-      /* 'row description' */
-      /* 'description1 row1' */
-      /* 'row description' ; */
       grid-gap: 15px;
-      
 }
 .firstrow{
     grid-row: 1/2;
-    grid-column: 1/4;
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: minmax(100px, auto);
+    padding: 3vh 0;
+}
+.firstrow .img{
+grid-row: 1/2;
+grid-column: 1/2;
+align-self: center;
+justify-self: right;
+width: 100%;
+}
+.firstrow .description{
+grid-row: 1/2;
+grid-column: 2/6;
+padding: 0 5vw;
+align-self: center;
 }
 .secondrow{
     grid-row: 2/3;
-    grid-column: 3/6;
-    display: flex;
-    float:right;
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    padding: 3vh 0;
+}
+.secondrow .iphone1{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    align-self: center;
+    width: 55%;
+    justify-self: right;
+}
+.secondrow .iphone2{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    align-self: center;
+    justify-self: center;
+    width: 55%;
+}
+.secondrow .description1{
+    grid-row: 1/2;
+    grid-column: 4/6;
+    justify-self: end;
+    align-self: center;
+    padding-right: 5vw;
 }
 .thirdrow{
     grid-row: 3/4;
-    grid-column: 1/4;
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: minmax(100px,auto);
+    padding: 3vh 0;
 }
-h4{
-    font-size: 24px;  
+.thirdrow img{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self:right;
+    width: 100%;
 }
-p{
-   /* text-align: left; */
-   color: rgba(80, 85, 92, 1);
-   padding: 2%;
-   font-size: 24px;
-   margin: 5px;
-   line-height: 1.1;
-}
-.description1{
-    grid-column-start: 1;
-    float: left;
-    padding: 30px;
-    height: 200px;
-    width: 80%;
-    text-align: left;
+.thirdrow .description{
+    grid-row: 1/2;
+    grid-column: 2/6;
+    padding: 0 5vw;
+    align-self: center;
+
 }
 
+h4{
+    font-size: 24px;
+    padding: 0;  
+    margin: 0;
+}
+p{
+   color: rgba(80, 85, 92, 1);
+   font-size: 24px;
+}
 ul{
     width :100%;
     display: flex;
@@ -190,10 +208,8 @@ ul{
     justify-content: space-around;
     padding: 3%;
     list-style: none;
-    color: rgba(80, 85, 92, 1) ;}
-
-   
-
+    color: rgba(80, 85, 92, 1) ;
+}
 button {
  background-color: rgba(172, 125, 3, 1); 
   border:  2px solid white; 
@@ -230,53 +246,47 @@ button {
     list-style: none;
 }
 @media only screen and (max-width: 600px) {
-    .workGrid{
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* flex-wrap:wrap; */
-        /* grid-template-columns:repeat(1,1fr); */
-        /*grid-template-columns: 1fr ; 
-         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-areas:
-        'row '
-        'description'
-        'row1'
-        'description1'*/
-     
-      
-    }
-  .firstrow img{
+
+.firstrow img{
 grid-column: 1/3;
 grid-row: 1/2;
   }
-  .firstrow .description{
+.firstrow .description{
       grid-column: 3/6;
       grid-row: 1/2;
   }
-  .secondrow img{
-    grid-column: 4/6;
-    grid-row: 2/3;
+.secondrow{
+    grid-column: 1/6;
+}
+.secondrow .iphone1{
+    grid-column:1/2;
+    justify-self: left;
+ }
+.secondrow .iphone2{
+    grid-column: 2/3;
+    justify-self: left;
+}
+
+.secondrow .description1{
+          grid-column: 3/6;
+          
       }
-      .secondrow .description{
-          grid-column: 1/4;
-          grid-row: 2/3;
-      }
-      .thirdrow img{
-        grid-column: 1/3;
+.thirdrow img{
+        grid-column: 3/6;
         grid-row: 3/4;
           }
-          .thirdrow .description{
+.thirdrow .description{
               grid-column: 3/6;
               grid-row: 3/4;
           }
 
-    .flexContainer {
+.flexContainer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     
     }
-    .nav { 
+.nav { 
             width: 100%;
             padding: 20px;
             display: flex;
@@ -285,7 +295,7 @@ grid-row: 1/2;
             justify-content: left;
             flex-wrap: wrap;
         }
-    .inline-block{
+.inline-block{
         display: flex;
         flex-wrap: wrap;
       
