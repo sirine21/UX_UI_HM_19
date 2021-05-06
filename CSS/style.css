@@ -127,7 +127,7 @@ hr {
     grid-template-rows: minmax(100px, auto);
     padding: 3vh 0;
 }
-.firstrow .img{
+.firstrow img{
 grid-row: 1/2;
 grid-column: 1/2;
 align-self: center;
